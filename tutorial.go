@@ -23,6 +23,9 @@ func main(){
 		fmt.Println("You cannot play!")
 		return //break out of this function
 	}
+
+	score :=0
+
 	fmt.Printf("What is better ,the RTX 3000 or RTX 3090? ")
 	var answer string
 	var answer2 string//to get user inputs seperated by space. store them in 2 seperate variables
@@ -30,8 +33,10 @@ func main(){
 	//check the answer is correct or not
 	if(answer + " " + answer2=="RTX 3090"){
 		fmt.Println("Correct!")
+		score+=1
 	}else if(answer + " " + answer2=="rtx 3090"){
 		fmt.Println("Correct!")
+		score+=1
 	}else{
 		fmt.Println("Incorrect!")
 	}
@@ -42,6 +47,7 @@ func main(){
 
 	if cores==12{
 		fmt.Println("Correct!")
+		score++
 	}else{
 		fmt.Println("Incorrect!")
 	}
