@@ -25,16 +25,14 @@ func main(){
 	}
 
 	score :=0
+	num_questions:=2
 
 	fmt.Printf("What is better ,the RTX 3000 or RTX 3090? ")
 	var answer string
 	var answer2 string//to get user inputs seperated by space. store them in 2 seperate variables
 	fmt.Scan(&answer, &answer2)
 	//check the answer is correct or not
-	if(answer + " " + answer2=="RTX 3090"){
-		fmt.Println("Correct!")
-		score+=1
-	}else if(answer + " " + answer2=="rtx 3090"){
+	if(answer + " " + answer2=="RTX 3090"|| answer + " " + answer2=="rtx 3090"){
 		fmt.Println("Correct!")
 		score+=1
 	}else{
@@ -51,6 +49,11 @@ func main(){
 	}else{
 		fmt.Println("Incorrect!")
 	}
+	fmt.Printf("You scored %v out of %v.\n",score,num_questions)
+	
+	//percentage score that the user gets
+	percent :=(float64(score)/float64(num_questions))*100
+	fmt.Printf("You scored: %v%%.",percent )
 
 }
 
